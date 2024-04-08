@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Open+Sans:wght@300;400;600&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Open+Sans:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/42c0259cef.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Candal&family=Kanit:wght@200&family=Lora&display=swap" rel="stylesheet">
+
+    <!-- custom styling -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <title>Bharat Samvaad|Feedback</title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+</head>
+<body>
+    <!-- HEADER START-->
+    <header>
+        <div class="logo">
+            <img src="{% static 'Logo/BharatSamvaadLOGO.png' %}" alt="" class="logo-img">
+        </div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                </a>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#" class="logout">Login</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- HEADER END-->
+
+
+    <!-- POST WRAPPER START-->
+    <div class="page-wrapper">
+        <!-- Post slider -->
+        <div class="post-slider">
+            <i class="fas fa-circle-chevron-left prev"></i>
+            <i class="fas fa-circle-chevron-right next"></i>
+
+            <div class="post-wrapper">
+                <div class="post">
+                    <img src="{% static 'Images/Scroll Image 1.png' %}" alt="" class="slider-image">
+                </div>
+                <div class="post">
+                    <img src="{% static 'Images/Scroll Image 2.png' %}" alt="" class="slider-image">
+                </div>
+                <div class="post">
+                    <img src="{% static 'Images/Scroll Image 3.png' %}" alt="" class="slider-image">
+                </div>
+                <div class="post">
+                    <img src="{% static 'Images/Scroll Image 4.png' %}" alt="" class="slider-image">
+                </div>
+            </div>
+        </div>
+        <!-- Post slider -->
+    </div>
+    <!-- POST WRAPPER END-->
+
+
+    <!-- CONTENT START -->
+    <div class="content">
+        <div class="feedback">
+            <h2>Feedback</h2>
+            <br>
+            <form action="feedback.html" method="post">
+                <input type="email" name="email" class="feedback-input" placeholder="Your email address...">
+                <textarea name="message" class="feedback-input" rows="5" placeholder="Your feedback..."></textarea>
+                <button type="submit" class="sub-btn">
+                    <i class="fas fa-envelope"></i>
+                    Send
+                </button>
+            </form>
+        </div>
+        <div class="para">
+            <h4>Welcome to Bharath Samvaad, your digital gateway to transparent and inclusive governance. We are dedicated to bridging the communication gap between citizens and government officials through our innovative web application. it is more than just a platform; it's a catalyst for positive change, empowering citizens to voice their concerns, contribute to decision-making processes, and shape the future of our communities.</h4>
+            
+            <h4>At Bharath Samvaad, we believe that effective governance begins with open dialogue and active participation. Our user-friendly interface makes it easy for citizens to submit complaints, offer recommendations, and prioritize issues that matter most to them. Through real-time notifications and status updates, users stay informed every step of the way, ensuring transparency and accountability in government actions.</h4>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+
+
+    <!-- FOOTER START -->
+    <div class="footer">
+        <div class="footer-content">
+            <h1 class="logo-text"><span>Bharat</span>Samvaad</h1>
+            <div class="contact">
+                <span><i class="fas fa-phone"></i> &nbsp; +91-90xxxxxxx2</span>
+                <span><i class="fas fa-envelope"></i> &nbsp; bharatsmvd@gmail.com</span>
+            </div>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; bharatsamvaad.com | Designed by Karnatechy
+        </div>
+    </div>
+    <!-- FOOTER END -->
+
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SLICK CAROUSEL -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- CUSTOM SCRIPT -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
